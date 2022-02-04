@@ -31,3 +31,10 @@ DOC:
 ]
 
 Possible Source 2 - https://opentdb.com/api_config.php
+
+Database resources:
+Database: https://quizwebsiteasg2-c11c.restdb.io/home/db/quizwebsiteasg2-c11c/cards/61fd306cf701f46000082033 
+Server API-Key: d2d02cc0510d5401d5ef408bdcb358168c7bf
+x-apikey: d2d02cc0510d5401d5ef408bdcb358168c7bf
+Content-Type: application/json
+GET: https://quizwebsiteasg2-c11c.restdb.io/rest/leaderboard
