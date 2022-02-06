@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 
-.navigation_bar {
+.navbar {
   position: relative;
   background-color: rgb(4, 211, 201);
   border-radius: 10px;
@@ -22,10 +22,4 @@ body {
   left: 3px;
   text-decoration: none;
   color: black;
-}
-
-.lottie {
-  position: relative;
-  height: 7cm;
-  width: 8cm;
 }
