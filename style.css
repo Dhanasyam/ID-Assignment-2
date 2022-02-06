@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+}
+
+.navigation_bar {
+  position: relative;
+  background-color: rgb(4, 211, 201);
+  border-radius: 10px;
+  padding: 2px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+}
+
+#navbarTogglerDemo03 {
+  position: absolute;
+  right: 3px;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 3px;
+  text-decoration: none;
+  color: black;
+}
+
+.lottie {
+  position: relative;
+  height: 7cm;
+  width: 8cm;
+}
