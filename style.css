@@ -50,7 +50,6 @@ button {
   background-color: transparent;
   color: rgb(41, 194, 186);
   border-color: rgb(41, 194, 186);
-  margin-left: 33%;
 }
 
 .container {
@@ -63,4 +62,9 @@ button {
 
 .Report-form {
   color: aliceblue;
+}
+
+a{
+  color:rgb(41, 194, 186);
+  text-decoration: none;
 }
