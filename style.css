@@ -3,23 +3,44 @@ body {
 }
 
 .navbar {
-  position: relative;
-  background-color: rgb(4, 211, 201);
+  background-color: rgb(41, 194, 186);
   border-radius: 10px;
-  padding: 2px;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-}
-
-#navbarTogglerDemo03 {
-  position: absolute;
-  right: 3px;
+  color: aliceblue;
 }
 
 .navbar-brand {
-  position: absolute;
-  left: 3px;
   text-decoration: none;
   color: black;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  background-color: white;
+}
+
+.lottierow {
+  display: flex;
+  left: 10%;
+  right: 10%;
+}
+
+.lottie {
+  align-items: center;
+  margin-left: 20%;
+  position: relative;
+}
+
+.start-button {
+  margin: 3cm;
+  border-radius: 7px;
+  height: 100px;
+  width: 400px;
+  font-size: 1cm;
+  bottom: 2px;
+  background-color: transparent;
+  color: aliceblue;
 }
