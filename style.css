@@ -44,3 +44,11 @@ button {
   background-color: transparent;
   color: aliceblue;
 }
+
+.container {
+  height: auto;
+}
+
+.container h2 {
+  color: white;
+}
