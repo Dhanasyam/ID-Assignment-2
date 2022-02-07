@@ -10,8 +10,9 @@ body {
 .navbar-brand {
   left: 1cm;
   text-decoration: none;
-  color: black;
+  color: rgb(54, 53, 53);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 1cm;
 }
 
 .nav-link {
@@ -26,9 +27,12 @@ button {
 }
 
 .lottierow {
-  left: 10px;
   display: flex;
-  background-color: rgb(56, 58, 59);
+  background-color: rgb(8, 40, 56);
+  align-items: center;
+  height: 500px;
+  margin-top: 1cm;
+  border-radius: 10px;
 }
 
 .lottie {
@@ -44,7 +48,9 @@ button {
   font-size: 1cm;
   bottom: 2px;
   background-color: transparent;
-  color: aliceblue;
+  color: rgb(41, 194, 186);
+  border-color: rgb(41, 194, 186);
+  margin-left: 33%;
 }
 
 .container {
