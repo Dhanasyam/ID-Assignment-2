@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap");
+
 body {
   background-color: black;
+  color: aliceblue;
 }
 
 .navbar {
@@ -18,7 +21,7 @@ body {
 .nav-link {
   text-decoration: none;
   color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nova Flat", cursive;
   font-weight: bold;
 }
 
@@ -70,14 +73,79 @@ button {
 .start-button a {
   color: rgb(41, 194, 186);
   text-decoration: none;
+  text-align: center;
 }
 
-.start-button:hover a {
-  text-decoration: none;
+.start-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 blue;
   color: red;
-  font-size: 1.2cm;
+  transform: scale(1.03);
+}
+/*Quiz*/
+.choice-container {
+  display: flex;
+  margin-bottom: 1px;
+  width: 100%;
+  border-radius: 4px;
+  background: white;
+  font-size: 3rem;
+  min-width: 80rem;
 }
 
+.choice-container:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transform: transform 100ms;
+}
+
+.choice-prefix {
+  padding: 2rem 25rem;
+  color: white;
+}
+
+.choice-text {
+  padding: 2rem;
+  width: 100%;
+}
+
+.correct {
+  background: greenyellow;
+}
+
+.incorrect {
+  background: red;
+}
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hud-main-text {
+  text-align: center;
+}
+
+#progressBar {
+  width: 20erm;
+  height: 3em;
+  border: 0.2rem solid green;
+  margin-top: 2rem;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+#progressBarFull {
+  height: 100%;
+  background: green;
+  width: 0%;
+}
+/* Report */
 .Report-form {
   height: 100vh;
   width: 100%;
@@ -103,29 +171,6 @@ button {
   margin: top 20px;
   font-size: 20px;
   color: black;
-}
-
-textarea {
-  resize: vertical;
-}
-
-button[type="submit"] {
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 20px;
-  font-size: 24px;
-  border-radius: 8px;
-  font-family: "montserrat";
-  color: aqua;
-  text-align: center;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: 0.3s ease background-color;
-}
-button[type="submit"]:hover {
-  margin-top: 5cm;
-  background-color: aliceblue;
 }
 
 #success-msg {
