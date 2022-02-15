@@ -42,34 +42,33 @@
     </div>
   </nav>
 
-  <div class ="Report-form d-flex">
-    <h1>Report a bug</h1>
-    <div id="success-msg col-12">
-        <div class="alert alert-success" role="alert">
-            Thank you for the feedback!
-        </div>
-    </div>
-    <div class="form col-10 justify-content-end align-content-center" id="add-contact">
+  <div class ="Report-form">
+    <div class="form">
       <form id="feedback-form">
-          <div class="form-group">
-              <label for="feed-name">Name</label>
-              <input type="text" id="feed-name" class="form-control" required>
-          </div>
-          <div class="form-group">
-              <label for="feed-email">Email</label>
-              <input type="email" id="feed-email" class="form-control" required>
-              <small id="help" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-              <label for="feed-msg">Message</label>
-              <input type="text" id="massage" name="massage">
-              <textarea id="success-msg" class="form-control" required>
-              </textarea>
-          </div>
-          
-          <input type="submit" value="Send" class="btn btn-primary" id="feedback-submit">
+        <div class="form-group">
+            <label for="feed-name">Name</label>
+            <input type="text" id="feed-name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="feed-email">Email</label>
+            <input type="email" id="feed-email" class="form-control" required>
+            <small id="help" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="feed-msg">Message</label>
+            <textarea id="success-msg" class="form-control" cols="30" rows="10" required>
+            </textarea>
+        </div>
+        
+        <input type="submit" value="Send" class="btn btn-primary" id="feedback-submit">
       </form>
-    </div>        
+    </div> 
+    
+    <div id="success-msg col-12">
+      <div class="alert alert-success" role="alert">
+          Thank you for the feedback!
+      </div>
+    </div>       
   </div>
     
 
