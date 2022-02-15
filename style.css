@@ -52,6 +52,9 @@ button {
   border-color: rgb(41, 194, 186);
 }
 
+.start-button:hover {
+  color: red;
+}
 .container {
   height: auto;
 }
@@ -64,7 +67,72 @@ button {
   color: aliceblue;
 }
 
-a{
-  color:rgb(41, 194, 186);
+.start-button a {
+  color: rgb(41, 194, 186);
   text-decoration: none;
+}
+
+.start-button:hover a {
+  text-decoration: none;
+  color: red;
+  font-size: 1.2cm;
+}
+
+.Report-form {
+  height: 100vh;
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px black;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.form-group {
+  width: 100%;
+  margin: top 20px;
+  font-size: 20px;
+  color: black;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  font-family: "montserrat";
+  color: aqua;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease background-color;
+}
+button[type="submit"]:hover {
+  margin-top: 5cm;
+  background-color: aliceblue;
+}
+
+#success-msg {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
 }
