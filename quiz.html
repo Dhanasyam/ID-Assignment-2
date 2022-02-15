@@ -37,6 +37,34 @@
   </nav>
 
   <h1>QUIZ PAGE</h1>
+  <div class="container">
+    <div class="justify-center flex-column" id="game">
+      <div id ="hud">
+        <div class="hud-item">
+          <p id="progressText" class="hud-prefix">
+            Question
+          </p>
+          <div id="progressbar">
+            <div id="progressBarFull"></div>
+          </div>
+        </div>
+        <div class="hud-item">
+          <p class="hud-prefix">
+            Score
+          </p>
+          <h1 class="hud-main-text" id="score">
+            0
+          </h1>
+        </div>
+      </div>
+
+      <h1>What is the answer to this question</h1>
+      <div class="choice-container">
+        <p class="choice-prefix">A</p>
+        <p class="choice-text" data-number="1">Choice</p>
+      </div>
+    </div>  
+  </div>
 
 
 
@@ -44,6 +72,7 @@
 
 
     <!-- JS -->
+    <script src="quiz.js"></script>
     <script src="script.js"></script>
     <!--Lottie JS-->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
