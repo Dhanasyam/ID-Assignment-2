@@ -84,7 +84,6 @@ h2 {
 
 .start-button:hover {
   cursor: pointer;
-  box-shadow: 0 0.4rem 1.4rem 0 blue;
   color: red;
   transform: scale(1.03);
 }
