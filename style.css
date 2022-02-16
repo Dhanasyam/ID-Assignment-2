@@ -5,6 +5,16 @@ body {
   color: aliceblue;
 }
 
+h1 {
+  font-size: 5.4rem;
+  color: aliceblue;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+  margin-bottom: 4rem;
+}
 .navbar {
   background-color: rgb(41, 194, 186);
   border-radius: 10px;
@@ -23,10 +33,6 @@ body {
   color: black;
   font-family: "Nova Flat", cursive;
   font-weight: bold;
-}
-
-button {
-  background-color: white;
 }
 
 .lottierow {
@@ -58,11 +64,11 @@ button {
 .start-button:hover {
   color: red;
 }
-.container {
+.leaderboard {
   height: auto;
 }
 
-.container h2 {
+.leaderboard h2 {
   color: white;
 }
 
@@ -82,69 +88,7 @@ button {
   color: red;
   transform: scale(1.03);
 }
-/*Quiz*/
-.choice-container {
-  display: flex;
-  margin-bottom: 1px;
-  width: 100%;
-  border-radius: 4px;
-  background: white;
-  font-size: 3rem;
-  min-width: 80rem;
-}
 
-.choice-container:hover {
-  cursor: pointer;
-  transform: scale(1.02);
-  transform: transform 100ms;
-}
-
-.choice-prefix {
-  padding: 2rem 25rem;
-  color: white;
-}
-
-.choice-text {
-  padding: 2rem;
-  width: 100%;
-}
-
-.correct {
-  background: greenyellow;
-}
-
-.incorrect {
-  background: red;
-}
-
-#hud {
-  display: flex;
-  justify-content: space-between;
-}
-
-.hud-prefix {
-  text-align: center;
-  font-size: 2rem;
-}
-
-.hud-main-text {
-  text-align: center;
-}
-
-#progressBar {
-  width: 20erm;
-  height: 3em;
-  border: 0.2rem solid green;
-  margin-top: 2rem;
-  border-radius: 50px;
-  overflow: hidden;
-}
-
-#progressBarFull {
-  height: 100%;
-  background: green;
-  width: 0%;
-}
 /* Report */
 .Report-form {
   height: 100vh;
