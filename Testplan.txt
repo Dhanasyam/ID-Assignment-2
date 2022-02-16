@@ -1,0 +1,5 @@
+We plan to send the link to multiple users
+and have them use the website. They can use
+the "Report" page to send us any feedbacks
+or let us know of any bugs regarding the website,
+which we can then use to improve on our assignment.
