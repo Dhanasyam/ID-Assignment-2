@@ -152,4 +152,108 @@ function endOfQuiz(){
     + finalScore + "</h1>");
     $(".choice-container").hide();
     $("#progressText").hide()
+    $("#c1").html("<form><div><input type=text required></div><input type=submit></form>")
+    var today = new Date();
+    var dateOfQuiz = today.getDate() + "-" + (today.getMonth()+1) + "-" + today.getFullYear;
+
+    $("form#form1").append($("<input/>", {
+        type: 'text',
+        id: 'vname',
+        name: 'name',
+        class: "form-control",
+        placeholder: 'Your Name',
+        required: true
+        }),
+        $("<br/>"),
+        $("<a/>",{
+            href: "index.html"
+        }).append(
+         $("<input/>", {
+            type: 'submit',
+            id: 'name-submit',
+            class : "btn btn-primary",
+            value: 'Submit'
+        })));
+    // var jsondata = {"Username": " ",
+    //                 "Score": finalScore,
+    //                 "Date": dateOfQuiz};
+    // var settings = {
+    //     "async": true,
+    //     "crossDomain": true,
+    //     "url": "https://quizwebsiteasg2-c11c.restdb.io/rest/leaderboard",
+    //     "method": "POST",
+    //     "headers": {
+    //         "content-type": "application/json",
+    //         "x-apikey": "<your CORS apikey here>",
+    //         "cache-control": "no-cache"
+    //     },
+    //     "processData": false,
+    //     "data": JSON.stringify(jsondata)
+    // }
+
+    // $.ajax(settings).done(function (response) {
+    // console.log(response);
+    // });
+
 }
+
+$("#name-submit").on("click", function(e){
+
+    e.preventDefault();
+    var today = new Date();
+    let Name = $("#vname").val();
+    let Score = Number($("#score").text());
+    let Date = today.getDate() + "-" + (today.getMonth()+1) + "-" + today.getFullYear;
+
+    let jsondata = {
+        "Username":Name,
+        "Score": Score,
+        "Date": Date
+    }
+
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://quizwebsiteasg2-c11c.restdb.io/rest/leaderboard",
+        "method": "POST",
+        "headers": {
+            "content-type": "application/json",
+            "x-apikey": "620f118234fd62156585877b",
+            "cache-control": "no-cache"
+        },
+        "processData": false,
+        "data": JSON.stringify(jsondata)
+    }
+
+    $.ajax(settings).done(function (response) {
+    console.log(response);
+    });
+
+    windows.location.href = "index.html";
+})
+
+// function submitFunction(){
+//     console.log("Submitted");
+//     window.location.href = "..\\index.html";
+//     var jsondata = {"Username": " ",
+//     "Score": finalScore,
+//     "Date": dateOfQuiz};
+    // var settings = {
+    //     "async": true,
+    //     "crossDomain": true,
+    //     "url": "https://quizwebsiteasg2-c11c.restdb.io/rest/leaderboard",
+    //     "method": "POST",
+    //     "headers": {
+    //         "content-type": "application/json",
+    //         "x-apikey": "<your CORS apikey here>",
+    //         "cache-control": "no-cache"
+    //     },
+    //     "processData": false,
+    //     "data": JSON.stringify(jsondata)
+    // }
+
+    // $.ajax(settings).done(function (response) {
+    // console.log(response);
+    // });
+// }
+
