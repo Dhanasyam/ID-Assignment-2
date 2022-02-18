@@ -19,9 +19,9 @@
           <p id="progressText" class="hud-prefix">
             Question
           </p>
-          <div id="progressbar">
+          <!-- <div id="progressbar">
             <div id="progressBarFull"></div>
-          </div>
+          </div> -->
         </div>
         <div class="hud-item">
           <p class="hud-prefix">
@@ -36,22 +36,22 @@
       <h1 id = "questionTitle">What is the answer to this question</h1>
       <div class="choice-container">
         <p class="choice-prefix">A</p>
-        <p id="c1" class="choice-text" data-number="1" onclick="checkAnswer(1)">Choice</p>
+        <p id="c1" class="choice-text" data-number="1" onclick="returnAnswer(1,questionList)">Choice</p>
       </div>
       
       <div class="choice-container">
         <p class="choice-prefix">B</p>
-        <p id="c2" class="choice-text" data-number="2" onclick="checkAnswer(2)">Choice</p>
+        <p id="c2" class="choice-text" data-number="2" onclick="returnAnswer(2,questionList)">Choice</p>
       </div>
       
       <div class="choice-container">
         <p class="choice-prefix">C</p>
-        <p id="c3" class="choice-text" data-number="3" onclick="checkAnswer(3)">Choice</p>
+        <p id="c3" class="choice-text" data-number="3" onclick="returnAnswer(3,questionList)">Choice</p>
       </div>
 
       <div class="choice-container">
         <p class="choice-prefix">D</p>
-        <p id="c4" class="choice-text" data-number="4" onclick="checkAnswer(4)">Choice</p>
+        <p id="c4" class="choice-text" data-number="4" onclick="returnAnswer(4,questionList)">Choice</p>
       </div>
     </div>  
   </div>
