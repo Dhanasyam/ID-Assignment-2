@@ -92,28 +92,28 @@ h2 {
 .Report-form {
   height: 100vh;
   width: 100%;
-  background-color: aliceblue;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .form {
+  margin-top: 3cm;
   width: 90%;
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  box-shadow: 0px 0px 20px black;
   border-radius: 8px;
   margin-bottom: 20px;
-  flex-direction: column;
+  background-color: black;
 }
 
 .form-group {
   width: 100%;
   margin: top 20px;
   font-size: 20px;
-  color: black;
+  color: white;
 }
 
 #success-msg {
@@ -123,4 +123,17 @@ h2 {
   padding: 10px;
   margin: 0 auto;
   border-radius: 8px;
+}
+
+.btn {
+  margin-top: 1cm;
+  color: aliceblue;
+  border: none;
+}
+
+.contact-img {
+  left: 2cm;
+  height: 200px;
+  width: 300px;
+  position: absolute;
 }
