@@ -153,7 +153,6 @@ function endOfQuiz(){
 
 }
 
-//Leaderboard data
 $("input#name-submit").on("click", function(e){
 
     e.preventDefault();
@@ -169,8 +168,15 @@ $("input#name-submit").on("click", function(e){
         "Date": quizDate
     }
 
-    console.log(jsondataleaderboard);
+    postResults(jsondataleaderboard);
 
+    console.log(jsondataleaderboard);
+    window.location.href = "index.html";
+
+})
+
+function postResults(jsondataScore){
+    
     $.ajax({
         "async": true,
         "crossDomain": true,
@@ -182,66 +188,9 @@ $("input#name-submit").on("click", function(e){
             "cache-control": "no-cache"
         },
         "processData": false,
-        "data": JSON.stringify(jsondataleaderboard)
+        "data": JSON.stringify(jsondataScore)
     })
+    console.log("FUNCTION RUN");
 
-    
-
-    window.location.href = "index.html";
-
-})
-
-function getContacts(limit = 10, all = true) {
-
-    let set = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://quizwebsiteasg2-c11c.restdb.io/rest/leaderboard",
-        "method": "POST",
-        "headers": {
-            "content-type": "application/json",
-            "x-apikey": "620f118234fd62156585877b",
-            "cache-control": "no-cache"
-        },
-    }
-    
-    $.ajax(set).done(function (response) {
-      
-      let content = "";
-
-      for (var i = 0; i < response.length && i < limit; i++) {
-        
-        
-        content = `${content}<tr id='${i + 1}'><td>${response[i].Username}</td>
-        <td>${response[i].Score}</td>
-        <td><a href='#' class='delete' data-id='${response[i]._id}'>Del</a></td><td><a href='#update-contact-container' class='update' data-id='${response[i]._id}' data-msg='${response[i].message}' data-name='${response[i].name}' data-email='${response[i].email}'>Update</a></td></tr>`;
-
-      }
-      $("#Leaderboard-list tbody").html(content);
-    });
-
-// function submitFunction(){
-//     console.log("Submitted");
-//     window.location.href = "..\\index.html";
-//     var jsondata = {"Username": " ",
-//     "Score": finalScore,
-//     "Date": dateOfQuiz};
-    // var settings = {
-    //     "async": true,
-    //     "crossDomain": true,
-    //     "url": "https://quizwebsiteasg2-c11c.restdb.io/rest/leaderboard",
-    //     "method": "POST",
-    //     "headers": {
-    //         "content-type": "application/json",
-    //         "x-apikey": "<your CORS apikey here>",
-    //         "cache-control": "no-cache"
-    //     },
-    //     "processData": false,
-    //     "data": JSON.stringify(jsondata)
-    // }
-
-    // $.ajax(settings).done(function (response) {
-    // console.log(response);
-    // });
-// }
 }
+
