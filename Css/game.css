@@ -16,6 +16,7 @@ body {
   color: aliceblue;
   background-color: black;
 }
+
 h1 {
   font-size: 5.4rem;
   color: aliceblue;
@@ -37,6 +38,7 @@ h2 {
   margin: 0 auto;
   padding: 2rem;
   flex-wrap: wrap;
+  margin-bottom: 5cm;
 }
 
 .flex-column {
