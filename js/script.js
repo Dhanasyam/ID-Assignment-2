@@ -1,5 +1,6 @@
 $(document).ready(function(){
     console.log("ready");
+    $("#form1").hide()
 });
 
 var questionList = []
@@ -7,6 +8,7 @@ var questionList = []
 function loadQuiz(onSuccess){
 
 }
+
 $.ajax({
     type: "GET",
     dataType: "json",
@@ -31,13 +33,6 @@ $.ajax({
             
         }
 
-        // for (let t = 0; t < questionList.length;t++){
-
-        //     $("#progressText").text("Question " + (t+1));
-        //     question = questionList[t];
-        //     printingQuestion(question);
-            
-        // }
         console.log(questionList);
         q = questionList[numofQn];
         printingQuestion(q,numofQn);
@@ -153,65 +148,29 @@ function endOfQuiz(){
     $(".choice-container").hide();
     $("#progressText").hide()
     $("#c1").html("<form><div><input type=text required></div><input type=submit></form>")
-    var today = new Date();
-    var dateOfQuiz = today.getDate() + "-" + (today.getMonth()+1) + "-" + today.getFullYear;
 
-    $("form#form1").append($("<input/>", {
-        type: 'text',
-        id: 'vname',
-        name: 'name',
-        class: "form-control",
-        placeholder: 'Your Name',
-        required: true
-        }),
-        $("<br/>"),
-        $("<a/>",{
-            href: "index.html"
-        }).append(
-         $("<input/>", {
-            type: 'submit',
-            id: 'name-submit',
-            class : "btn btn-primary",
-            value: 'Submit'
-        })));
-    // var jsondata = {"Username": " ",
-    //                 "Score": finalScore,
-    //                 "Date": dateOfQuiz};
-    // var settings = {
-    //     "async": true,
-    //     "crossDomain": true,
-    //     "url": "https://quizwebsiteasg2-c11c.restdb.io/rest/leaderboard",
-    //     "method": "POST",
-    //     "headers": {
-    //         "content-type": "application/json",
-    //         "x-apikey": "<your CORS apikey here>",
-    //         "cache-control": "no-cache"
-    //     },
-    //     "processData": false,
-    //     "data": JSON.stringify(jsondata)
-    // }
-
-    // $.ajax(settings).done(function (response) {
-    // console.log(response);
-    // });
+    $("#form1").show();
 
 }
 
-$("#name-submit").on("click", function(e){
+$("input#name-submit").on("click", function(e){
 
     e.preventDefault();
-    var today = new Date();
-    let Name = $("#vname").val();
+    var timeElapsed = Date.now();
+    var today = new Date(timeElapsed);
+    let Name = $("#username").val();
     let Score = Number($("#score").text());
-    let Date = today.getDate() + "-" + (today.getMonth()+1) + "-" + today.getFullYear;
+    let quizDate = today.getDate() + "-" + (today.getMonth()+1) + "-" + today.getFullYear();
 
-    let jsondata = {
+    let jsondataleaderboard = {
         "Username":Name,
         "Score": Score,
-        "Date": Date
+        "Date": quizDate
     }
 
-    var settings = {
+    console.log(jsondataleaderboard);
+
+    $.ajax({
         "async": true,
         "crossDomain": true,
         "url": "https://quizwebsiteasg2-c11c.restdb.io/rest/leaderboard",
@@ -222,14 +181,11 @@ $("#name-submit").on("click", function(e){
             "cache-control": "no-cache"
         },
         "processData": false,
-        "data": JSON.stringify(jsondata)
-    }
+        "data": JSON.stringify(jsondataleaderboard)
+    })
 
-    $.ajax(settings).done(function (response) {
-    console.log(response);
-    });
+    window.location.href = "index.html";
 
-    windows.location.href = "index.html";
 })
 
 // function submitFunction(){
