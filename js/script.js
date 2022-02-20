@@ -3,11 +3,7 @@ $(document).ready(function(){
     $("#form1").hide()
 });
 
-var questionList = []
-
-function loadQuiz(onSuccess){
-
-}
+var questionList = [];
 
 $.ajax({
     type: "GET",
@@ -187,28 +183,3 @@ $("input#name-submit").on("click", function(e){
     window.location.href = "index.html";
 
 })
-
-// function submitFunction(){
-//     console.log("Submitted");
-//     window.location.href = "..\\index.html";
-//     var jsondata = {"Username": " ",
-//     "Score": finalScore,
-//     "Date": dateOfQuiz};
-    // var settings = {
-    //     "async": true,
-    //     "crossDomain": true,
-    //     "url": "https://quizwebsiteasg2-c11c.restdb.io/rest/leaderboard",
-    //     "method": "POST",
-    //     "headers": {
-    //         "content-type": "application/json",
-    //         "x-apikey": "<your CORS apikey here>",
-    //         "cache-control": "no-cache"
-    //     },
-    //     "processData": false,
-    //     "data": JSON.stringify(jsondata)
-    // }
-
-    // $.ajax(settings).done(function (response) {
-    // console.log(response);
-    // });
-// }
